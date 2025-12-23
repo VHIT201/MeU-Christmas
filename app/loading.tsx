@@ -4,7 +4,7 @@ export default function Loading() {
       width: "100%",
       height: "100vh",
       background: "linear-gradient(45deg, #000011, #001122, #000011)",
-      color: "#fff",
+      color: "#ffff",
       display: "flex",
       flexDirection: "column",
       alignItems: "center",
