@@ -9,7 +9,7 @@ import * as THREE from "three";
 import { useGLTF } from "@react-three/drei";
 
 // model will be served from /assets in `public` directory
-const modelUrl = "/assets/merry_christmas.glb";
+const modelUrl = "/assets/scene.gltf";
 const snowmanUrl = "/assets/snowman.glb";
 const gift1Url = "/assets/wrapped_christmas_gift.glb";
 const gift2Url = "/assets/wrapped_christmas_gift.glb";
