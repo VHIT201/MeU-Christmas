@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 import React, { useRef, useMemo, Suspense, useEffect, useState } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
@@ -9,7 +10,7 @@ import * as THREE from "three";
 import { useGLTF } from "@react-three/drei";
 
 // model will be served from /assets in `public` directory
-const modelUrl = "/assets/scene.gltf";
+const modelUrl = "/assets/xmas_tree.glb";
 const snowmanUrl = "/assets/snowman.glb";
 const gift1Url = "/assets/wrapped_christmas_gift.glb";
 const gift2Url = "/assets/wrapped_christmas_gift.glb";
@@ -32,9 +33,9 @@ function Model() {
   return (
     <primitive
       object={gltf.scene}
-      position={[0, 2, 175]}
+      position={[10, 0, 0]}
       rotation={[0, 0, 0]}
-      scale={70}
+      scale={60}
     />
   );
 }
@@ -138,7 +139,7 @@ function DirtOnGround({ count = 500 }: { count?: number }) {
     return p;
   }, [count]);
 
-  return (
+  return (  
     <points>
       <bufferGeometry>
         <bufferAttribute attach="attributes-position" args={[positions, 3]} />
@@ -526,7 +527,7 @@ export default function SnowScene() {
 
           {/* <DirtOnGround count={500} /> */}
 
-          <Snow count={6000} />
+          <Snow count={2000} />
 
           <OrbitControls
             enablePan={true}
